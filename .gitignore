@@ -1,0 +1,24 @@
+# Build results
+bin/
+obj/
+
+# Rider / VS
+.idea/
+.vs/
+*.user
+*.suo
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# EF Core Migrations build artifacts
+Migrations/obj/
+
+# SQLite DB files
+APIUsuarios/app.db
+*.db
+*.db-shm
+*.db-wal

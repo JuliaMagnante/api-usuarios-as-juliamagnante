@@ -1,0 +1,72 @@
+{
+  "info": {
+    "name": "APIUsuarios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "b8c3a3d1-6f5a-4f64-9b3e-aaaa11112222"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" }
+  ],
+  "item": [
+    {
+      "name": "Listar Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/usuarios", "host": ["{{baseUrl}}"], "path": ["usuarios"] }
+      }
+    },
+    {
+      "name": "Obter Usuario por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/usuarios/1", "host": ["{{baseUrl}}"], "path": ["usuarios", "1"] }
+      }
+    },
+    {
+      "name": "Criar Usuario - Válido",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"senha\": \"segredo123\",\n  \"dataNascimento\": \"1990-01-15\",\n  \"telefone\": \"(11) 98888-7777\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/usuarios", "host": ["{{baseUrl}}"], "path": ["usuarios"] }
+      }
+    },
+    {
+      "name": "Criar Usuario - Email Duplicado (409)",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"senha\": \"segredo123\",\n  \"dataNascimento\": \"1990-01-15\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/usuarios", "host": ["{{baseUrl}}"], "path": ["usuarios"] }
+      }
+    },
+    {
+      "name": "Atualizar Usuario",
+      "request": {
+        "method": "PUT",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"João P. Silva\",\n  \"email\": \"joao.silva@example.com\",\n  \"dataNascimento\": \"1990-01-15\",\n  \"telefone\": \"(11) 98888-7777\",\n  \"ativo\": true\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/usuarios/1", "host": ["{{baseUrl}}"], "path": ["usuarios", "1"] }
+      }
+    },
+    {
+      "name": "Remover Usuario (Soft Delete)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/usuarios/1", "host": ["{{baseUrl}}"], "path": ["usuarios", "1"] }
+      }
+    }
+  ]
+}
