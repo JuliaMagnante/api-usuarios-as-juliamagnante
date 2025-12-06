@@ -102,6 +102,6 @@ APIUsuarios/
 - DELETE `/usuarios/{id}` → 204 No Content, 404 Not Found (soft delete: `Ativo=false`)
 
 #### Autor
-- Nome: Seu Nome Completo
-- RA: Seu RA
-- Curso: [Nome do curso]
+- Nome: Julia Magnante dos Santos
+- Disciplina: Backend - Professor Lucas Fogaça
+- Curso: Analise e Desenvolvimento de Sistemas
