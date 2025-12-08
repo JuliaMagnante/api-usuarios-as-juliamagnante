@@ -105,3 +105,5 @@ APIUsuarios/
 - Nome: Julia Magnante dos Santos
 - Disciplina: Backend - Professor Lucas Fogaça
 - Curso: Analise e Desenvolvimento de Sistemas
+
+Link de apresentação: https://drive.google.com/drive/folders/1gWzqsD0Eh2lbkIEi_fJZ4CvBYhQfu_zV?usp=sharing
